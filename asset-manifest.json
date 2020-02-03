@@ -1,22 +1,28 @@
 {
   "files": {
     "main.css": "/medp341-class-website/static/css/main.d1b05096.chunk.css",
-    "main.js": "/medp341-class-website/static/js/main.17883ce8.chunk.js",
-    "main.js.map": "/medp341-class-website/static/js/main.17883ce8.chunk.js.map",
+    "main.js": "/medp341-class-website/static/js/main.a19c1b5a.chunk.js",
+    "main.js.map": "/medp341-class-website/static/js/main.a19c1b5a.chunk.js.map",
     "runtime-main.js": "/medp341-class-website/static/js/runtime-main.bee6056a.js",
     "runtime-main.js.map": "/medp341-class-website/static/js/runtime-main.bee6056a.js.map",
-    "static/js/2.53336d99.chunk.js": "/medp341-class-website/static/js/2.53336d99.chunk.js",
-    "static/js/2.53336d99.chunk.js.map": "/medp341-class-website/static/js/2.53336d99.chunk.js.map",
+    "static/js/2.f03978b1.chunk.js": "/medp341-class-website/static/js/2.f03978b1.chunk.js",
+    "static/js/2.f03978b1.chunk.js.map": "/medp341-class-website/static/js/2.f03978b1.chunk.js.map",
     "index.html": "/medp341-class-website/index.html",
-    "precache-manifest.fac331f6a4ccdc54b31b6c541e707702.js": "/medp341-class-website/precache-manifest.fac331f6a4ccdc54b31b6c541e707702.js",
+    "precache-manifest.d07aa3edd924ae60716b40ad744ea6f7.js": "/medp341-class-website/precache-manifest.d07aa3edd924ae60716b40ad744ea6f7.js",
     "service-worker.js": "/medp341-class-website/service-worker.js",
     "static/css/main.d1b05096.chunk.css.map": "/medp341-class-website/static/css/main.d1b05096.chunk.css.map",
-    "static/js/2.53336d99.chunk.js.LICENSE.txt": "/medp341-class-website/static/js/2.53336d99.chunk.js.LICENSE.txt"
+    "static/js/2.f03978b1.chunk.js.LICENSE.txt": "/medp341-class-website/static/js/2.f03978b1.chunk.js.LICENSE.txt",
+    "static/media/a1-1.png": "/medp341-class-website/static/media/a1-1.4f11b882.png",
+    "static/media/a1-10.png": "/medp341-class-website/static/media/a1-10.b5ddef3a.png",
+    "static/media/a1-2.png": "/medp341-class-website/static/media/a1-2.7d4a27ed.png",
+    "static/media/a1-3.png": "/medp341-class-website/static/media/a1-3.1eb021bd.png",
+    "static/media/a1-4.png": "/medp341-class-website/static/media/a1-4.2b8dfe62.png",
+    "static/media/a1-5.png": "/medp341-class-website/static/media/a1-5.7eae352c.png"
   },
   "entrypoints": [
     "static/js/runtime-main.bee6056a.js",
-    "static/js/2.53336d99.chunk.js",
+    "static/js/2.f03978b1.chunk.js",
     "static/css/main.d1b05096.chunk.css",
-    "static/js/main.17883ce8.chunk.js"
+    "static/js/main.a19c1b5a.chunk.js"
   ]
 }
