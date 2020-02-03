@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/medp341-class-website/static/css/main.d1b05096.chunk.css",
+    "main.js": "/medp341-class-website/static/js/main.17883ce8.chunk.js",
+    "main.js.map": "/medp341-class-website/static/js/main.17883ce8.chunk.js.map",
+    "runtime-main.js": "/medp341-class-website/static/js/runtime-main.bee6056a.js",
+    "runtime-main.js.map": "/medp341-class-website/static/js/runtime-main.bee6056a.js.map",
+    "static/js/2.53336d99.chunk.js": "/medp341-class-website/static/js/2.53336d99.chunk.js",
+    "static/js/2.53336d99.chunk.js.map": "/medp341-class-website/static/js/2.53336d99.chunk.js.map",
+    "index.html": "/medp341-class-website/index.html",
+    "precache-manifest.fac331f6a4ccdc54b31b6c541e707702.js": "/medp341-class-website/precache-manifest.fac331f6a4ccdc54b31b6c541e707702.js",
+    "service-worker.js": "/medp341-class-website/service-worker.js",
+    "static/css/main.d1b05096.chunk.css.map": "/medp341-class-website/static/css/main.d1b05096.chunk.css.map",
+    "static/js/2.53336d99.chunk.js.LICENSE.txt": "/medp341-class-website/static/js/2.53336d99.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.bee6056a.js",
+    "static/js/2.53336d99.chunk.js",
+    "static/css/main.d1b05096.chunk.css",
+    "static/js/main.17883ce8.chunk.js"
+  ]
+}
