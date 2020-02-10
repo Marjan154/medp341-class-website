@@ -1,7 +1,8 @@
 import React, { Component } from "react";
-import cards from "./cards.json";
+import data from "./cards.json";
 import Card from "./Card";
 
+const data_cards = data;
 class ShuffleDeck extends Component {
   constructor(props) {
     super(props);
@@ -14,53 +15,49 @@ class ShuffleDeck extends Component {
   }
 
   componentDidMount() {
-    let deck = cards.map(card => (
-      <div key={card.suit[0] + card.value}>
-        <Card
-          suit={card.suit}
-          value={card.value}
-          id={card.suit[0] + card.value}
-        />
-      </div>
-    ));
+    let deck = Array.from(data);
     this.setState({ deck, shuffledDeck: deck });
   }
 
   handlePlayers = event => {
+    this.setState({
+      players: event.target.value
+    });
+  };
+
+  handleSubmit = e => {
+    e.preventDefault();
     this.setState(
       {
-        players: event.target.value
+        shuffledDeck: data_cards,
+        dealtCards: {}
       },
       () => {
-        console.log(this.state.players);
+        this.dealCards();
       }
     );
   };
 
-  dealCards = e => {
-    e.preventDefault();
+  dealCards = () => {
     const { players, shuffledDeck } = this.state;
     let playHands = {};
     let count = 0;
-    while (count < 7 && shuffledDeck.length > players) {
+    while (count < 5 && shuffledDeck.length > players) {
       for (let i = 0; i < players; i++) {
         let card = this.getCard();
-        console.log(card);
         playHands[i] === undefined
           ? (playHands[i] = [card])
           : playHands[i].push(card);
       }
       count++;
     }
-    console.log(playHands);
     this.setState({ dealtCards: playHands });
   };
 
   getCard = () => {
-    let shuffledDeck = this.state.shuffledDeck;
-    let card = shuffledDeck.pop();
-    console.log(card);
-    this.setState({ shuffledDeck });
+    let a_deck = Array.from(this.state.shuffledDeck);
+    let card = a_deck.pop();
+    this.setState({ shuffledDeck: a_deck });
     return card;
   };
 
@@ -77,28 +74,61 @@ class ShuffleDeck extends Component {
     this.setState({ shuffledDeck: playDeck });
   };
 
+  firstLastShuffle = () => {
+    const { shuffledDeck } = this.state;
+    let len = shuffledDeck.length;
+    let shuffled = [];
+    for (let i = 0; i < len / 2; i++) {
+      shuffledDeck[len - i - 1] && shuffled.push(shuffledDeck[len - i - 1]);
+      shuffled.push(shuffledDeck[i]);
+    }
+    this.setState({ shuffledDeck: shuffled });
+  };
+
   reset = () => {
-    this.setState({ shuffledDeck: this.state.deck });
+    this.setState({
+      shuffledDeck: data_cards,
+      dealtCards: {},
+      players: 1
+    });
   };
   render() {
-    let myDeck = this.state.shuffledDeck.map(card => <div>{card}</div>);
+    let myDeck = this.state.shuffledDeck.map(card => (
+      <div key={card.suit[0] + card.value}>
+        <Card
+          suit={card.suit}
+          value={card.value}
+          id={card.suit[0] + card.value}
+        />
+      </div>
+    ));
+
     let playerCards = [];
     const { dealtCards } = this.state;
     for (let player in dealtCards) {
-      let playerBox = (
+      const playerHand = dealtCards[player].map(card => (
+        <div key={card.suit[0] + card.value}>
+          <Card
+            suit={card.suit}
+            value={card.value}
+            id={card.suit[0] + card.value}
+          />
+        </div>
+      ));
+      const playerBox = (
         <div>
           <h1>Player {parseInt(player) + 1}</h1>
-          <div className="card-container">{dealtCards[player]}</div>
+          <div className="card-container">{playerHand}</div>
         </div>
       );
       playerCards.push(playerBox);
     }
-    console.log(playerCards);
+
     return (
       <div>
-        <div>MYDECK</div>
+        <h1>Shuffle Deck Assignment</h1>
 
-        <form onSubmit={this.dealCards}>
+        <form onSubmit={this.handleSubmit}>
           <label>
             Number of Players:
             <input
@@ -109,10 +139,11 @@ class ShuffleDeck extends Component {
               required
             />
           </label>
-          <input type="submit" value="Submit" />
+          <input type="submit" value="Deal Cards" />
         </form>
         <br />
         <button onClick={this.farroShuffle}>Farro Shuffle</button>
+        <button onClick={this.firstLastShuffle}>Other shuffle</button>
         <button onClick={this.reset}>Reset</button>
 
         {playerCards.length && (
@@ -123,6 +154,7 @@ class ShuffleDeck extends Component {
         )}
 
         <h1>THE DECK OF CARDS</h1>
+        <h2>{myDeck.length} cards</h2>
         <div className="card-container-outer">
           <div className="card-container">{myDeck}</div>
         </div>
