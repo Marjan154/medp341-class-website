@@ -127,14 +127,17 @@ class ShuffleDeck extends Component {
       );
       playerCards.push(playerBox);
     }
-    const pcards = this.state.players && playerCards.length && (
-      <div>
+    const pcards =
+      this.state.players && playerCards.length ? (
         <div>
-          <h1>Cards for {this.state.players} players:</h1>
-          {playerCards}
+          <div>
+            <h1>Cards for {this.state.players} players:</h1>
+            {playerCards}
+          </div>
         </div>
-      </div>
-    );
+      ) : (
+        <div></div>
+      );
     return (
       <div>
         <h1>Shuffle Deck Assignment</h1>
