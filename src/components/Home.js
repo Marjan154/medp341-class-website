@@ -10,6 +10,7 @@ class Home extends Component {
                 <div style={{ margin: "10%" }}>
                     <h2>Assignments</h2>
                     <Link to="/assignment1"><li>Assignment 1</li></Link>
+                    <Link to="/assignment2"><li>Assignment 2</li></Link>
                 </div>
             </div>
         );
