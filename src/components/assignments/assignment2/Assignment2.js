@@ -53,6 +53,7 @@ class ShuffleDeck extends Component {
       count++;
     }
     this.setState({ dealtCards: playHands });
+    document.getElementById("player_amount_field").reset();
   };
 
   getCard = () => {
@@ -93,6 +94,7 @@ class ShuffleDeck extends Component {
       dealtCards: {},
       players: 1
     });
+    document.getElementById("player_amount_field").reset();
   };
   render() {
     let myDeck = this.state.shuffledDeck.map(card => (
@@ -125,12 +127,19 @@ class ShuffleDeck extends Component {
       );
       playerCards.push(playerBox);
     }
-
+    const pcards = this.state.players && playerCards.length && (
+      <div>
+        <div>
+          <h1>Cards for {this.state.players} players:</h1>
+          {playerCards}
+        </div>
+      </div>
+    );
     return (
       <div>
         <h1>Shuffle Deck Assignment</h1>
 
-        <form onSubmit={this.handleSubmit}>
+        <form onSubmit={this.handleSubmit} id="player_amount_field">
           <label>
             Number of Players:
             <input
@@ -147,13 +156,7 @@ class ShuffleDeck extends Component {
         <button onClick={this.farroShuffle}>Farro Shuffle</button>
         <button onClick={this.firstLastShuffle}>Other shuffle</button>
         <button onClick={this.reset}>Reset</button>
-
-        {playerCards.length && (
-          <div>
-            <h1>PLAYER CARDS</h1>
-            {playerCards}
-          </div>
-        )}
+        {pcards}
 
         <h1>THE DECK OF CARDS</h1>
         <h2>{myDeck.length} cards</h2>
