@@ -22,7 +22,7 @@ class ShuffleDeck extends Component {
 
   handlePlayers = event => {
     this.setState({
-      players: event.target.value
+      players: event.target.value > 10 ? 10 : event.target.value
     });
   };
 
