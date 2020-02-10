@@ -10,7 +10,8 @@ class ShuffleDeck extends Component {
       deck: [],
       shuffledDeck: [],
       players: 1,
-      dealtCards: {}
+      dealtCards: {},
+      displayDeck: []
     };
   }
 
@@ -29,7 +30,7 @@ class ShuffleDeck extends Component {
     e.preventDefault();
     this.setState(
       {
-        shuffledDeck: data_cards,
+        shuffledDeck: Array.from(this.state.deck),
         dealtCards: {}
       },
       () => {
@@ -55,9 +56,10 @@ class ShuffleDeck extends Component {
   };
 
   getCard = () => {
-    let a_deck = Array.from(this.state.shuffledDeck);
+    let a_deck = this.state.shuffledDeck;
     let card = a_deck.pop();
     this.setState({ shuffledDeck: a_deck });
+    // debugger;
     return card;
   };
 
@@ -87,7 +89,7 @@ class ShuffleDeck extends Component {
 
   reset = () => {
     this.setState({
-      shuffledDeck: data_cards,
+      shuffledDeck: Array.from(this.state.deck),
       dealtCards: {},
       players: 1
     });
