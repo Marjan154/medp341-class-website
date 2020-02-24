@@ -1,8 +1,7 @@
 import React, { Component } from "react";
-import data from "./cards.json";
+import data from "./cards.json"; // data from online card json
 import Card from "./Card";
 
-const data_cards = data;
 class ShuffleDeck extends Component {
   constructor(props) {
     super(props);
@@ -16,18 +15,22 @@ class ShuffleDeck extends Component {
   }
 
   componentDidMount() {
+    // Make deep copy of array so cards dont delete after popping.
     let deck = Array.from(data);
     this.setState({ deck, shuffledDeck: deck });
   }
 
+  // store input player value with a max of 10 players
   handlePlayers = event => {
     this.setState({
       players: event.target.value > 10 ? 10 : event.target.value
     });
   };
 
+  // submit form, retrieve players and start dealing
   handleSubmit = e => {
     e.preventDefault();
+    // reset deck with fresh deck and empty all players hands
     this.setState(
       {
         shuffledDeck: Array.from(this.state.deck),
@@ -39,6 +42,7 @@ class ShuffleDeck extends Component {
     );
   };
 
+  // deal 5 cards to each player, one by one
   dealCards = () => {
     const { players, shuffledDeck } = this.state;
     let playHands = {};
@@ -53,9 +57,11 @@ class ShuffleDeck extends Component {
       count++;
     }
     this.setState({ dealtCards: playHands });
+    // resets player input
     document.getElementById("player_amount_field").reset();
   };
 
+  // pop a card from shuffled deck
   getCard = () => {
     let a_deck = this.state.shuffledDeck;
     let card = a_deck.pop();
@@ -64,6 +70,7 @@ class ShuffleDeck extends Component {
     return card;
   };
 
+  // farro suffle
   farroShuffle = () => {
     const { shuffledDeck } = this.state;
     let len = shuffledDeck.length;
@@ -77,6 +84,7 @@ class ShuffleDeck extends Component {
     this.setState({ shuffledDeck: playDeck });
   };
 
+  // shuffle that just swaps first and last cards
   firstLastShuffle = () => {
     const { shuffledDeck } = this.state;
     let len = shuffledDeck.length;
@@ -88,6 +96,7 @@ class ShuffleDeck extends Component {
     this.setState({ shuffledDeck: shuffled });
   };
 
+  // resets deck of cards, players and dealtcards
   reset = () => {
     this.setState({
       shuffledDeck: Array.from(this.state.deck),
@@ -97,6 +106,7 @@ class ShuffleDeck extends Component {
     document.getElementById("player_amount_field").reset();
   };
   render() {
+    // playing deck to render
     let myDeck = this.state.shuffledDeck.map(card => (
       <div key={card.suit[0] + card.value}>
         <Card
@@ -107,6 +117,7 @@ class ShuffleDeck extends Component {
       </div>
     ));
 
+    // each players hand object to render
     let playerCards = [];
     const { dealtCards } = this.state;
     for (let player in dealtCards) {
@@ -127,6 +138,8 @@ class ShuffleDeck extends Component {
       );
       playerCards.push(playerBox);
     }
+
+    // only display if there are players and hands
     const pcards =
       this.state.players && playerCards.length ? (
         <div>

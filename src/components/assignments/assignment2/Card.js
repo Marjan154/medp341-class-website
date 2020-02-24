@@ -10,6 +10,7 @@ class Card extends Component {
 
   render() {
     const { id, suit, value, color, image } = this.props;
+
     return (
       <div class="cardbox">
         <img src={image} className="card-image" />
