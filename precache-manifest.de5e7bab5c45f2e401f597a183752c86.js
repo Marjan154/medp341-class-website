@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "9b3624ac9290f112fd712108895789d5",
+    "revision": "6fbb6182e2583eb9a193765d0a186fcb",
     "url": "/medp341-class-website/index.html"
   },
   {
-    "revision": "fd905cb8dd0f5c052024",
+    "revision": "4789f3dd6914a680724e",
     "url": "/medp341-class-website/static/css/main.41b45f6e.chunk.css"
   },
   {
-    "revision": "94bc8a355bb7dd1d2c6c",
-    "url": "/medp341-class-website/static/js/2.987076cf.chunk.js"
+    "revision": "8118fae51d80e0fc0aea",
+    "url": "/medp341-class-website/static/js/2.d4f1c3fd.chunk.js"
   },
   {
-    "revision": "928d7b5eb39d16fe9a880722c974b51e",
-    "url": "/medp341-class-website/static/js/2.987076cf.chunk.js.LICENSE.txt"
+    "revision": "280b48dbc3281f342da16f66e41cf46c",
+    "url": "/medp341-class-website/static/js/2.d4f1c3fd.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "fd905cb8dd0f5c052024",
-    "url": "/medp341-class-website/static/js/main.bdc832b4.chunk.js"
+    "revision": "4789f3dd6914a680724e",
+    "url": "/medp341-class-website/static/js/main.0f394c79.chunk.js"
   },
   {
     "revision": "3fd7f396c77dd5a65f41",
