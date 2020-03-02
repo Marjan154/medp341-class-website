@@ -112,6 +112,34 @@ class Blogs extends Component {
           that AI is more than just training models with data, but a result of
           labor, information and natural resources.
         </p>
+        <h3 style={{ margin: "50px", textAlign: "left" }}>
+          Ethan Zuckerman, The Cute Cat Theory of Digital Activism
+        </h3>
+        <p style={{ margin: "50px", textAlign: "left", fontSize: "20px" }}>
+          I always wondered how censorship worked in other countries. Being a
+          millenial American, it's hard for me to imagine censorship of the web
+          and justification of this censorship, especially when it comes to
+          political, goverment nad human rights issues. But I have to understand
+          that there are manhy countries that have gone out of their way to
+          create new browsers, apps and technology to control and hide things
+          from the public. Allowing banal content like cat memes apparently is
+          something higher powers had no choice but to allow, as the people
+          would find their ways to do. Containing more sensitive topics in a way
+          seems easier, as many people were less relcutant to go against
+          censorhip whhen their internet and services became faster.
+        </p>
+
+        <h3 style={{ margin: "50px", textAlign: "left" }}>
+          Paul Ford, i had a couple of drinks and woke up with 1000 nerds
+        </h3>
+        <p style={{ margin: "50px", textAlign: "left", fontSize: "20px" }}>
+          This article was an interesting read. A lot of the web niw is so
+          homogenous. When I think of the web, I think of pages I can open on
+          the browser. This article reminded me that there is a whole world out
+          there of technial creativity and fun that existed before web 2.0.
+          While they seem old fashioned or unfamiliar to modern people, web art
+          can be done with raw code in your own termnal.
+        </p>
       </div>
     );
   }

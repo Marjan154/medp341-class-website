@@ -21,6 +21,9 @@ class Home extends Component {
           <Link to="/assignment3">
             <li>Assignment 3</li>
           </Link>
+          <Link to="/assignment4">
+            <li>Assignment 4</li>
+          </Link>
         </div>
       </div>
     );

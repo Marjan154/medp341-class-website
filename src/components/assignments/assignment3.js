@@ -68,6 +68,28 @@ class gifHoroscopeAPI extends Component {
     );
   };
   render() {
+    let signs = [
+      "Aries",
+      "Taurus",
+      "Gemini",
+      "Cancer",
+      "Leo",
+      "Virgo",
+      "Libra",
+      "Scorpio",
+      "Sagittarius",
+      "Capricorn",
+      "Aquarius",
+      "Pisces"
+    ];
+    let inputs = signs.map(sign => {
+      return (
+        <div>
+          <input type="radio" id={sign} name="sign" value={sign} />
+          <label for={sign}>{sign}</label>
+        </div>
+      );
+    });
     return (
       <div>
         <h1>Gif Horoscope</h1>
@@ -86,6 +108,7 @@ class gifHoroscopeAPI extends Component {
             name={"sign"}
             onChange={this.inputHandler}
           />
+          {inputs}
           <button>Submit</button>
         </form>
         <div style={this.gifContainer}>{this.state.gifHoroscopes}</div>
