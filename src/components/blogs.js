@@ -140,6 +140,35 @@ class Blogs extends Component {
           While they seem old fashioned or unfamiliar to modern people, web art
           can be done with raw code in your own termnal.
         </p>
+
+        <h3 style={{ margin: "50px", textAlign: "left" }}>
+          Karly Wildenhaus Towards a Library Without Walls
+        </h3>
+        <p style={{ margin: "50px", textAlign: "left", fontSize: "20px" }}>
+          The Are.na I feel is a different platform, one that I am not used to.
+          I never even imagined that people could uniquely categorize blocks of
+          information, and define themselves. People can create definitions of
+          concepts that cannot normally be boxed under any existing definition.
+        </p>
+
+        <h3 style={{ margin: "50px", textAlign: "left" }}>
+          Daniel Romein (Bellingcat) Europol’s Asian City Child Abuse
+          Photographs Geolocated
+        </h3>
+        <p style={{ margin: "50px", textAlign: "left", fontSize: "20px" }}>
+          This article made me feel conflicted. I think in the modern world,
+          censorship is often seen as a bad thing, atleast that woul dbe my
+          shallow opinion of it. On one hand I recognize the difficulty of
+          identifying the location of a crime scene, as current technology isn't
+          catered to be very flexible of photos. Censoring photos gives a lower
+          chance of identifying the location. But the first photo of a sexual
+          abuse being censored makes me think, wouldn't the victim prefer to be
+          censored? A traumatic event, where the victim is in a vulnerable
+          state, probably isn't something anyone wants mass circulated across
+          the world. But finding closure is important too, which has a higher
+          chance if the crime scene can be identified. I wonder whats more
+          important?
+        </p>
       </div>
     );
   }

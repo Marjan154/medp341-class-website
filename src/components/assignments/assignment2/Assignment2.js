@@ -155,6 +155,38 @@ class ShuffleDeck extends Component {
       <div>
         <h1>Shuffle Deck Assignment</h1>
 
+        <p style={{ margin: "50px", textAlign: "left", fontSize: "20px" }}>
+          For this weeks assigment, I wasn't sure how complex I needed to be. At
+          first I just had shuffling decks but noticed the topic of dealing was
+          there. Do I need to deal cards? If so, do I need to deal them amongst
+          a variable number of players? Should I be able to return the cards?
+          Should I keep dealing until the cards run out? Should I single dealing
+          of cards? There was so many things I could do, I wasn't sure about the
+          requirements. So I decided to keep it simple and just allow for
+          shuffeling and one time equal dealing of cards.
+        </p>
+        <p style={{ margin: "50px", textAlign: "left", fontSize: "20px" }}>
+          I actually learned a lot from thsis project than I thought. I was
+          stuck on this bug that I absolutely could not figure out. Dealing out
+          cards and shuffeling worked fine. However, I could not reset my deck
+          of cards. There would be cards missing everytime I dealt cards. The
+          cards I dealt were not returning to the deck. WHY????? I made a
+          variable to store my state of cards. I had seperate decks for dealing
+          and a fresh deck to reset my deck on click. BUT WHY WAS MY FRESH DECK
+          MUTATING? I never made any calls to deal from my fresh deck. I only
+          made calls to my dealing Deck, my deck should be untouched. My array
+          is const, I am necer edititng the array, how could it be altered?
+        </p>
+        <p style={{ margin: "50px", textAlign: "left", fontSize: "20px" }}>
+          After a few hours I finally found my bug. Doing "const freshDeck =
+          cards" and "const dealDeck = cards" does NOT create a copy of an
+          array. Coming from C++ I ahd no idea, that I was just referencing the
+          same array every time a set a new variable to that array of cards. I
+          needed to do a full on deep copy of my array!!! After figuring that
+          out, my code worked as expected. Guess you learn things in places you
+          least expect it to!
+        </p>
+
         <form onSubmit={this.handleSubmit} id="player_amount_field">
           <label>
             Number of Players:

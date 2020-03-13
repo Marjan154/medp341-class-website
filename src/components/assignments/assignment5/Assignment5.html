@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    html file
+    <a href="/about">about</a>
+    <script>
+        function getData(){
+          fetch('http://localhost:8080/getTotal')
+          .then((response) => {
+            console.log(response);
+            return response.json();
+          })
+          .then((data) => {
+            console.log(data);
+            var node = document.createElement("DIV");                 
+                var textnode = document.createTextNode(data);         // Create a text node
+                node.appendChild(textnode);                            
+                document.getElementById("card").appendChild(node);
+          });
+        }
+        function postData(){
+              const data = { 
+                user: document.getElementById("user").value,
+                password: document.getElementById("password").value 
+              };
+    
+              fetch('http://localhost:8080/login', {
+                method: 'POST',
+                headers: {
+                  'Content-Type': 'application/json',
+                  "Access-Control-Allow-Origin" : "*", 
+                  "Access-Control-Allow-Credentials" : true
+                },
+                body: JSON.stringify(data),
+              })
+              .then((response) =>{return response.json();} )
+              .then((data) => {
+                var node = document.createElement("DIV");                 
+                var textnode = document.createTextNode(`Hello ${data.user}. How are you this fine day?`);         // Create a text node
+                node.appendChild(textnode);                            
+                document.getElementById("card").appendChild(node);
+              })
+            }
+        </script>
+      </head>
+      <body>
+        <p>There wasn't really any data I could get or something I could really post to, so I just pull in a hard coded string through my get request and for my post request I just had it display the username on the screen. Normally I would add a user to a database with my post request and retreive data from some databse or another api to get data, but since there wasn't really anything, I just stuck with hardcoded values.</p>
+        <h1>post requests!</h1>
+        Username: <input type="TEXT" id="user" size="40"><br>
+        Password: <input type="password" id="password" size="40"><br>
+        <input type="button" onclick="postData()" value="Submit">
+        
+        <div style="padding:50px" id="card"></div>
+        <button onclick="getData()">Get Your Cash balance</button>
+      </body>
+</html>
