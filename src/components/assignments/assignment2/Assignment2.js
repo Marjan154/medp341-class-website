@@ -175,13 +175,13 @@ class ShuffleDeck extends Component {
           and a fresh deck to reset my deck on click. BUT WHY WAS MY FRESH DECK
           MUTATING? I never made any calls to deal from my fresh deck. I only
           made calls to my dealing Deck, my deck should be untouched. My array
-          is const, I am necer edititng the array, how could it be altered?
+          is const, I am never editing the array, how could it be altered?
         </p>
         <p style={{ margin: "50px", textAlign: "left", fontSize: "20px" }}>
           After a few hours I finally found my bug. Doing "const freshDeck =
           cards" and "const dealDeck = cards" does NOT create a copy of an
-          array. Coming from C++ I ahd no idea, that I was just referencing the
-          same array every time a set a new variable to that array of cards. I
+          array. Coming from C++ I had no idea, that I was just referencing the
+          same array every time I set a new variable to that array of cards. I
           needed to do a full on deep copy of my array!!! After figuring that
           out, my code worked as expected. Guess you learn things in places you
           least expect it to!
