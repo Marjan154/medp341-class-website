@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/medp341-class-website/static/css/main.41b45f6e.chunk.css",
-    "main.js": "/medp341-class-website/static/js/main.36cc9f85.chunk.js",
-    "main.js.map": "/medp341-class-website/static/js/main.36cc9f85.chunk.js.map",
+    "main.css": "/medp341-class-website/static/css/main.70f14542.chunk.css",
+    "main.js": "/medp341-class-website/static/js/main.d3f3a955.chunk.js",
+    "main.js.map": "/medp341-class-website/static/js/main.d3f3a955.chunk.js.map",
     "runtime-main.js": "/medp341-class-website/static/js/runtime-main.bee6056a.js",
     "runtime-main.js.map": "/medp341-class-website/static/js/runtime-main.bee6056a.js.map",
-    "static/js/2.d4f1c3fd.chunk.js": "/medp341-class-website/static/js/2.d4f1c3fd.chunk.js",
-    "static/js/2.d4f1c3fd.chunk.js.map": "/medp341-class-website/static/js/2.d4f1c3fd.chunk.js.map",
+    "static/js/2.658acb5e.chunk.js": "/medp341-class-website/static/js/2.658acb5e.chunk.js",
+    "static/js/2.658acb5e.chunk.js.map": "/medp341-class-website/static/js/2.658acb5e.chunk.js.map",
     "index.html": "/medp341-class-website/index.html",
-    "precache-manifest.32be64d5c89d10c5757d489faf550cd7.js": "/medp341-class-website/precache-manifest.32be64d5c89d10c5757d489faf550cd7.js",
+    "precache-manifest.7f4c584f0adcbde475d6cb2fb752c054.js": "/medp341-class-website/precache-manifest.7f4c584f0adcbde475d6cb2fb752c054.js",
     "service-worker.js": "/medp341-class-website/service-worker.js",
-    "static/css/main.41b45f6e.chunk.css.map": "/medp341-class-website/static/css/main.41b45f6e.chunk.css.map",
-    "static/js/2.d4f1c3fd.chunk.js.LICENSE.txt": "/medp341-class-website/static/js/2.d4f1c3fd.chunk.js.LICENSE.txt",
+    "static/css/main.70f14542.chunk.css.map": "/medp341-class-website/static/css/main.70f14542.chunk.css.map",
+    "static/js/2.658acb5e.chunk.js.LICENSE.txt": "/medp341-class-website/static/js/2.658acb5e.chunk.js.LICENSE.txt",
     "static/media/a1-1.png": "/medp341-class-website/static/media/a1-1.4f11b882.png",
     "static/media/a1-10.png": "/medp341-class-website/static/media/a1-10.b5ddef3a.png",
     "static/media/a1-2.png": "/medp341-class-website/static/media/a1-2.7d4a27ed.png",
@@ -21,8 +21,8 @@
   },
   "entrypoints": [
     "static/js/runtime-main.bee6056a.js",
-    "static/js/2.d4f1c3fd.chunk.js",
-    "static/css/main.41b45f6e.chunk.css",
-    "static/js/main.36cc9f85.chunk.js"
+    "static/js/2.658acb5e.chunk.js",
+    "static/css/main.70f14542.chunk.css",
+    "static/js/main.d3f3a955.chunk.js"
   ]
 }
